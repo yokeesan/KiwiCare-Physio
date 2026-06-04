@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: "Evidence-based physiotherapy services in Mount Eden, Auckland. Sports rehabilitation, chronic pain management, post-surgery recovery, dry needling and more. Book your appointment today.",
   keywords: "physiotherapy, physio, Auckland, Mount Eden, sports rehabilitation, chronic pain, ACC, New Zealand",
   icons: {
-    icon: "/KiwiCare.png",
-    apple: "/KiwiCare.png",
+    icon: "/favicon.png?v=3",
+    apple: "/favicon.png?v=3",
   },
 };
 
