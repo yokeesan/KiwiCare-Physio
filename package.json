@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next build && node .next/standalone/server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -13,9 +13,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "framer-motion": "^12.38.0",
-    "lucide-react": "^0.577.0"
-  },
-  "devDependencies": {
+    "lucide-react": "^0.577.0",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -24,5 +22,6 @@
     "eslint-config-next": "^15.3.3",
     "tailwindcss": "^4",
     "@tailwindcss/postcss": "^4"
-  }
+  },
+  "devDependencies": {}
 }
