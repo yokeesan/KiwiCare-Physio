@@ -8,6 +8,7 @@ import {
   Heart,
   Instagram,
   Facebook,
+  Linkedin,
 } from "lucide-react";
 
 const quickLinks = [
@@ -83,10 +84,16 @@ export default function Footer() {
               Dedicated to restoring movement and improving lives.
             </p>
             <div style={{ display: "flex", gap: "0.6rem" }}>
-              {[Instagram, Facebook].map((Icon, i) => (
+              {[
+                { Icon: Instagram, href: "https://www.instagram.com/kiwicarephysio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
+                { Icon: Facebook, href: "https://www.facebook.com/share/1BT8H6cLJm/?mibextid=wwXIfr" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/kiwicare-physio/" },
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel={href !== "#" ? "noopener noreferrer" : undefined}
                   style={{
                     width: 36,
                     height: 36,
