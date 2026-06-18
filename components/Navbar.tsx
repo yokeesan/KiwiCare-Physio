@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -45,12 +45,6 @@ export default function Navbar() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-            <span
-              style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}
-            >
-              <MapPin size={13} /> 675 Mount Eden Road, Mount Eden, Auckland
-              1024
-            </span>
             <span
               style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}
             >

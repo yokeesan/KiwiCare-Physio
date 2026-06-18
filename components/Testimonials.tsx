@@ -50,7 +50,7 @@ const reasons = [
     icon: <Sparkles size={28} />,
     title: "Modern Clinic in Mount Eden",
     description:
-      "Conveniently located at 675 Mount Eden Road with state-of-the-art equipment and a welcoming environment.",
+      "Conveniently located with state-of-the-art equipment and a welcoming environment.",
     color: "#10b981",
   },
 ];

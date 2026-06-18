@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  MapPin,
   Phone,
   Mail,
   Clock,
@@ -31,6 +30,7 @@ const serviceLinks = [
 export default function Footer() {
   return (
     <footer
+      id="contact"
       style={{ background: "#0f172a", color: "white", position: "relative" }}
     >
       <div
@@ -204,10 +204,6 @@ export default function Footer() {
               }}
             >
               {[
-                {
-                  icon: <MapPin size={16} />,
-                  text: "675 Mount Eden Road, Mount Eden, Auckland 1024",
-                },
                 { icon: <Phone size={16} />, text: "+64 22 060 2032" },
                 {
                   icon: <Mail size={16} />,

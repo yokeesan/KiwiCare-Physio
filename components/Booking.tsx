@@ -36,7 +36,7 @@ export default function Booking() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {[
                 { icon: <CalendarDays size={20} />, title: 'Flexible Scheduling', sub: 'Same-day appointments available' },
-                { icon: <Clock size={20} />, title: 'Mon – Sat, 8 AM – 6 PM', sub: '675 Mount Eden Road, Auckland' },
+                { icon: <Clock size={20} />, title: 'Mon – Sat, 8 AM – 6 PM', sub: 'Mount Eden, Auckland' },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div style={{ width: 44, height: 44, borderRadius: 12, background: 'rgba(255,255,255,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{item.icon}</div>
