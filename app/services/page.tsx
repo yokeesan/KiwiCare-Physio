@@ -2,10 +2,37 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Activity, Bone, Brain, Zap, Hand, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Our Services | Kiwicare Physio Auckland',
-  description: 'Detailed physiotherapy services including Neurological Rehabilitation, Concussion Management, Cupping, and Manual Therapy.',
+export const metadata: Metadata = {
+  title: "Specialised Physiotherapy Services",
+  description: "Explore our range of professional physiotherapy services in Auckland: Neurological Rehabilitation, Concussion Management, Cupping, Manual Therapy, Dry Needling & ACC post-surgery recovery.",
+  keywords: "Kiwicare, Kiwi Care, Kiwicare Physio, Kiwicare Physiotherapy, Kiwicare Physio Auckland, Kiwicare physsio, Kiwicare physsio pvt ltd, Kiwicare physio pvt ltd, Sarniya Moganathas, physiotherapy services Auckland, neurological rehabilitation Mount Eden, concussion clinic Auckland, cupping therapy Auckland, dry needling Mount Eden, ACC provider physiotherapy, sports injury clinic",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_NZ",
+    url: "https://www.kiwicarephysio.co.nz/services",
+    title: "Specialised Physiotherapy Services | Kiwicare Physio Auckland",
+    description: "Explore our range of professional physiotherapy services in Auckland: Neurological Rehabilitation, Concussion Management, Cupping, Manual Therapy, Dry Needling & ACC post-surgery recovery.",
+    siteName: "Kiwicare Physio",
+    images: [
+      {
+        url: "/hero-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kiwicare Physio - Specialised Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Specialised Physiotherapy Services | Kiwicare Physio Auckland",
+    description: "Explore our range of professional physiotherapy services in Auckland: Neurological Rehabilitation, Concussion Management, Cupping, Manual Therapy, Dry Needling & ACC post-surgery recovery.",
+    images: ["/hero-image.png"],
+  },
 };
 
 const detailedServices = [
@@ -47,8 +74,51 @@ const detailedServices = [
 ];
 
 export default function ServicesPage() {
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Physiotherapy Services",
+    "description": "Specialised physiotherapy services offered at Kiwicare Physio in Mount Eden, Auckland.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Neurological Rehabilitation",
+        "description": "Specialised rehabilitation for conditions such as Traumatic Brain Injury, spinal cord injuries, sports injuries, and stroke recovery using Bobath/NDT, mirror therapy, and robotic-assisted gait training."
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Concussion Management",
+        "description": "Research-led concussion program including participant assessments, blood biomarkers, gait parameters, and cognitive/motor performance levels."
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Manual Therapy & Cupping",
+        "description": "Joint mobilisation, clinical cupping therapy, specialized taping, and soft tissue massage to reduce muscular tension and improve mobility."
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Dry Needling & Pain Management",
+        "description": "Trigger point therapy via fine needles and TENS combined with clinical reasoning for chronic pain management."
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Post-Surgery Recovery & ACC",
+        "description": "ACC registered provider supporting functional recovery after orthopaedic surgery or work injuries with tailored exercise programmes."
+      }
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <Navbar />
       
       {/* Page Header */}
